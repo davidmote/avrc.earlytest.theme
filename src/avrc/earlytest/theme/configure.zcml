@@ -8,13 +8,14 @@
     xmlns:plone="http://namespaces.plone.org/plone"
     i18n_domain="avrc.cfar.theme">
 
-        <includeDependencies package="." />
-<!--         <grok:grok package=".browser" />
+<!--         <includeDependencies package="." />
+ -->
+ <!--         <grok:grok package=".browser" />
  -->  
-        <genericsetup:registerProfile
-            name="default" title="CFAR Theme" directory="profiles/default" description="Installs the CFAR Theme package" provides="Products.GenericSetup.interfaces.EXTENSION" />
+<!--        <genericsetup:registerProfile
+             name="default" title="CFAR Theme" directory="profiles/default" description="Installs the CFAR Theme package" provides="Products.GenericSetup.interfaces.EXTENSION" />
 
         <plone:static
-            type="theme" directory="static" />
+            type="theme" directory="static" /> -->
 
 </configure>
