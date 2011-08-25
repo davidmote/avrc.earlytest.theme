@@ -1,0 +1,60 @@
+/** Home Page Styles **/
+.section-front-page h1{margin:0px 0px 13px 27px;color:#000;font-family: "Georgia", Times, serif;font-size:16pt;font-weight:normal;text-transform:none;}
+
+.section-front-page #steps,
+.section-front-page #portal-column-two{color:#fff; overflow:hidden; width: 100%;}
+@media only screen and (max-device-width: 480px) {
+    .section-front-page #portal-column-two{position: relative; left: 920px;}
+}
+
+.section-front-page #steps li,
+.section-front-page #portal-column-two .portletWrapper{float:left;position:relative;padding:20px 25px;width:178px;height:200px;background:#393636;list-style:none;border-left:2px #ffffff solid;}
+.section-front-page #steps li h3,
+.section-front-page #portal-column-two .portletWrapper .portletHeader,
+.section-front-page #portal-column-two .portletWrapper .portletHeader a,
+.section-front-page #portal-column-two .portletWrapper .portletHeader span{margin-bottom:0px; color:#fff;
+background-image:none; height: auto;padding:0px;line-height:1.5em; font-size:20pt}
+
+.section-front-page #steps li:first-child,
+.section-front-page #portal-column-two .portletWrapper:first-child{border-left:0px #ffffff solid;}
+.section-front-page #steps li,
+.section-front-page #steps h3,
+.section-front-page #portal-column-two .portletWrapper .portletHeader,
+.section-front-page #portal-column-two .portletWrapper .portletHeader a
+{font-size:20pt;font-weight:bold;}
+.section-front-page #steps li p,
+.section-front-page #portal-column-two .portletWrapper .portletItem{font-family: "Georgia", Times, serif;font-weight:normal;font-size:10pt;color:#fff; clear:none; font-style:normal; width:auto}
+
+.section-front-page #steps li .button1,
+.section-front-page #steps li .button2,
+.section-front-page #portal-column-two .portletWrapper .portletFooter{position:absolute;bottom:0;margin:0px;height:10px;padding-top:10px;line-height:0px;right:auto}
+
+.section-front-page #steps li .button1 span,
+.section-front-page #steps li .button2 span,
+.section-front-page #portal-column-two .portletWrapper .portletFooter a{padding-top:0px;padding-right:30px;font-size:10pt;font-weight:bold;font-family:"Helvetica Neue", Arial, Helvetica, sans-serif;background:url(../theme-images/mini-arrow.png) 95% 0px no-repeat;}
+
+.section-front-page #steps li .button1,
+.section-front-page #portal-column-two .portletWrapper .portletFooter{float:left;width:230px; margin-left:-23px;text-align:right;text-transform:lowercase;background:url(../theme-images/step-footer1.png) no-repeat;}
+
+.section-front-page #steps li .button1 span,
+.section-front-page #portal-column-two .portletWrapper .portletFooter a{margin-right:5px; color:#00AEEF;}
+
+.section-front-page #steps li .button2,
+.section-front-page #portal-column-two .portletWrapper:last-child .portletFooter,
+.section-front-page #portal-column-two .portletWrapper .portlet-static-4-learn-more .portletFooter{float:right;width:230px; margin-left:-25px;text-align:right;background:url(../theme-images/step-footer2.png) no-repeat;}
+
+.section-front-page #steps li .button2 span,
+.section-front-page #portal-column-two .portletWrapper:last-child .portletFooter a{margin-right:40px;}
+
+#header #portal-globalnav, #header .portletNavigationTree {
+margin-top: 0px;
+}
+
+div#portal-column-two > div.portletWrapper:last-child {
+   padding:20px 0px;
+   height: 200px;
+   width: 228px;
+}
+
+div#portal-column-two > div.portletWrapper:last-child .portletStaticText {
+}
