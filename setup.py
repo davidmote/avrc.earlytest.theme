@@ -3,7 +3,7 @@ import os
 
 version = '0.1'
 
-setup(name='avrc.cfar.theme',
+setup(name='avrc.earlytest.theme',
       version=version,
       description="Cfar theme",
       long_description=open("README.txt").read() + "\n" +
@@ -21,7 +21,7 @@ setup(name='avrc.cfar.theme',
       license='GPL',
       packages=find_packages('src', exclude=['ez_setup']),
       package_dir={'':'src'},
-      namespace_packages=['avrc', 'avrc.cfar'],
+      namespace_packages=['avrc', 'avrc.earlytest'],
       include_package_data=True,
       zip_safe=False,
       install_requires=[

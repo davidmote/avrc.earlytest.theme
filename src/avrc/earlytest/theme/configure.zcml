@@ -6,16 +6,15 @@
     xmlns:genericsetup="http://namespaces.zope.org/genericsetup"
     xmlns:grok="http://namespaces.zope.org/grok"
     xmlns:plone="http://namespaces.plone.org/plone"
-    i18n_domain="avrc.cfar.theme">
+    i18n_domain="avrc.earlytest.theme">
 
-<!--         <includeDependencies package="." />
- -->
+        <includeDependencies package="." />
  <!--         <grok:grok package=".browser" />
  -->  
-<!--        <genericsetup:registerProfile
-             name="default" title="CFAR Theme" directory="profiles/default" description="Installs the CFAR Theme package" provides="Products.GenericSetup.interfaces.EXTENSION" />
+       <genericsetup:registerProfile
+             name="default" title="Early Test Theme" directory="profiles/default" description="Installs the ET Theme package" provides="Products.GenericSetup.interfaces.EXTENSION" />
 
         <plone:static
-            type="theme" directory="static" /> -->
+            type="theme" directory="static" />
 
 </configure>
