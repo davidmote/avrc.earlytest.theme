@@ -5,18 +5,15 @@
     xmlns:xsl="http://www.w3.org/1999/XSL/Transform">
 
     <xsl:variable name="wrapped" css:select="#visual-portal-wrapper"/>
-    <xsl:variable name="leftcolumns" css:select="#portal-column-one"/>
-    <xsl:variable name="rightcolumns" css:select="#portal-column-two"/>
+    <xsl:variable name="columns" css:select="#portal-column-two"/>
 
     <!-- The default theme, used for standard Plone web pages -->
     <theme href="./home.html" if-path="/ front-page/" />
     <theme href="./default.html" />
-    <notheme if="$ajax_load" />
     <notheme if-content="not($wrapped)" />
-
     <replace css:theme="base" css:content="base" />
     <!-- Rules applying to a standard Plone web page -->
-    <rules if-content="$wrapped">
+    <rules css:if-content="#visual-portal-wrapper">
         <replace css:theme="title" css:content="title" />
         <!-- Add meta tags -->
         <drop theme="/html/head/meta" />
@@ -36,63 +33,32 @@
              This is important for per-section styling -->
         <merge attributes="class" css:content="body" css:theme="body" />
         <copy attributes="id dir" css:content="body" css:theme="body" />
-
-        <copy attributes="href title accesskey" css:content="a#portal-logo" css:theme="a#logo-link" />
-
-        <replace css:content="#portal-personaltools"
-                 css:theme-children=".nav-global ul li" />
-
-        <replace css:content="#portal-globalnav"
-                 css:theme-children="#nav-main" />
-                 
-        <strip css:theme="#content"
-               if-path="/ front-page/" />
-               
-        <replace css:content="#portal-column-content"
-                 css:theme-children="#content"  />
         
-        <drop css:content="#portal-breadcrumbs" />
-        <drop css:content=".documentAuthor" />
+        <copy attributes="href title accesskey" css:content="a#portal-logo" css:theme="a#portal-logo" />
         
         <rules if-path="/ front-page/">
-            <replace css:content="#edit-bar" css:theme="#edit-area" />
-
-            <replace css:content-children="#portal-column-one > div:nth-of-type(1) .portletHeader"
-            css:theme-children="#contentfeature1 > h2" />
-
-            <replace css:content-children="#portal-column-one > div:nth-of-type(1) .portletItem"
-            css:theme-children="#contentfeature1 > p" />
-        
-            <replace css:content-children="#portal-column-one > div:nth-of-type(2) .portletHeader"
-            css:theme-children="#contentfeature2 > h2" />
-
-            <replace css:content-children="#portal-column-one > div:nth-of-type(2) .portletItem"
-            css:theme-children="#contentfeature2 > p" />
-        
-            <replace css:content="#content h1"  css:theme-children="#contentfeature3 h2" />
-        
-            <replace css:content-children="#content-core"   css:theme-children="#contentfeature3 p" />
+            <replace css:content="#slideshow" css:theme="#slideshow" />
+            <replace css:content="#portal-column-two" css:theme="#steps" />
         </rules>
-        <replace css:content-children="#portal-column-one"
-                 css:theme-children="#contentbox-leftbar" />
-                 
-        <drop css:theme="#contentbox-leftbar"
-              if-content="not($leftcolumns)" />
-              
-        <replace css:content-children="#portal-column-two"
-                 css:theme-children="#contentbox-rightbar" />
-              
-        <strip css:theme=".contentbox-partial"
-               if-content="not($rightcolumns)" />
-               
-        <drop css:theme="#contentbox-rightbar"
-              if-content="not($rightcolumns)" />
-               
-        <replace css:content="#portal-siteactions"
-                 css:theme="#footer-actions" />
+        <replace css:content='.portletNavigationTree dd' css:theme-children='.portletNavigationTree' />
+        <drop css:content='a.navTreeFolderish > img' />
 
-        <after css:content="#visual-portal-wrapper script"
-               css:theme-children="body" />
+        <replace css:content-children='#portal-breadcrumbs' css:theme-children='#portal-breadcrumbs' />
+        <!-- Document Content -->
+        <replace css:content-children="#content" css:theme-children=".col-a" if-content="$columns" />
+
+        <replace css:content-children="#content" css:theme-children="#content" if-content="not($columns)" />
+        
+        
+        <before css:content="#edit-bar" css:theme="#content" />
+        <before css:content=".portalMessage" css:theme="#content" />
+
+        <replace css:content="#portal-siteactions li" css:theme-children="#bar" />
+        <!-- Columns -->
+<!-- 
+        <replace css:content-children="#portal-column-one > *" css:theme-children="#column-one" />
+-->        <replace css:content-children="#portal-column-two > *" css:theme-children=".col-b" />
+
     </rules>
 </rules>
     
